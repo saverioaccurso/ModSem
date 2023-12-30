@@ -1,0 +1,1975 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.modsem.org/ontologies/japanesemythologyontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.modsem.org/ontologies/japanesemythologyontology">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Import>http://www.ontologydesignpatterns.org/cp/owl/place.owl</Import>
+    <Import>http://www.ontologydesignpatterns.org/cp/owl/partof.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Japanese Mythology Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">jmo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.modsem.org/ontologies/japanesemythologyontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&xsd;string">JapaneseMythologyOntology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <Literal datatypeIRI="&xsd;string">2024-01-25</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ontologia per descrivere le principali caratteristiche della mitologia giapponese</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ontology to describe the main features of Japanese mythology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ontologia della Mitologia Giapponese</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal datatypeIRI="&xsd;string">Saverio Accurso</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Creatura_Mitologica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Divinità"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Epoca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventoAntico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventoDiUnificazione"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventoVendicativo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gioiello"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InsegnaImperiale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kappa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LegendaryHuman"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MythicalEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oni"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ritual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SacredObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SacredPlace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Specchio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TesoroNazionale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yokai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yurei"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.wikidata.org/wiki/Q335140"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Avviene_In"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Contiene"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Ha_Creatura"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Ha_Evento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NarrataInEvento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Oggetto_In_Luogo_Sacro"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#UsatoInRito"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#comprende"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#èAssociataA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#è_inserito_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#è_situato_In"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#AnnoEvento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PotenzaMagica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Yebisu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amaterasu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Asuka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Byodoin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Emma_Daio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Heian"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Izanagi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Izanami"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kagami"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kagutsuchi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kinkakuji"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kusanagi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kyoto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Magatama"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Masakado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Musashi_Miyamoto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nascita_Delle_Divinità"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nobunaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oiwa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Okiku"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Raijin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rito_Di_Iniziazione"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rito_Di_Invocazione"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rito_Di_Purificazione"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sensoji"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Susanoo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Todaiji"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tokyo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tsukiyomi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Umibozu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yoshitsune"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Amaterasu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Ebisu_(mythology)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanagi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanami"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Kagu-tsuchi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Minamoto_no_Yoshitsune"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Miyamoto_Musashi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Oda_Nobunaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Raijin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Susanoo-no-Mikoto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Taira_no_Masakado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://dbpedia.org/page/Tsukuyomi-no-Mikoto"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Divinità"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#èAssociataA"/>
+            <Class IRI="#SacredPlace"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Epoca"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#Ha_Evento"/>
+            <Class IRI="#MythicalEvent"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Kappa"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q335140"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MythicalEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Ha_Creatura"/>
+            <Class IRI="#Creatura_Mitologica"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MythicalEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+            <Class IRI="#LegendaryHuman"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MythicalEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#Parte_Di_Epoca"/>
+            <Class IRI="#Epoca"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Oni"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ritual"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Rito_Di_Purificazione"/>
+            <NamedIndividual IRI="#Rito_Di_Invocazione"/>
+            <NamedIndividual IRI="#Rito_Di_Iniziazione"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Ritual"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#Avviene_In"/>
+            <Class IRI="#SacredPlace"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SacredObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#UsatoInRito"/>
+            <Class IRI="#Ritual"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SacredObject"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#UsatoInRito"/>
+            <Class IRI="#SacredPlace"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SacredPlace"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#è_inserito_in"/>
+            <Class IRI="#MythicalEvent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SacredPlace"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#comprende"/>
+            <Class IRI="#Divinità"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SacredPlace"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#è_situato_In"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Spada"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#NarrataInEvento"/>
+            <Class IRI="#MythicalEvent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Yokai"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Yurei"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#Contiene"/>
+            <Class IRI="#SacredPlace"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#EventoAntico"/>
+        <Class IRI="#MythicalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventoDiUnificazione"/>
+        <Class IRI="#MythicalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventoVendicativo"/>
+        <Class IRI="#MythicalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gioiello"/>
+        <Class IRI="#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InsegnaImperiale"/>
+        <Class IRI="#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Kappa"/>
+        <Class IRI="#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oni"/>
+        <Class IRI="#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spada"/>
+        <Class IRI="#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Specchio"/>
+        <Class IRI="#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TesoroNazionale"/>
+        <Class IRI="#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yokai"/>
+        <Class IRI="#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yurei"/>
+        <Class IRI="#Yokai"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Gioiello"/>
+        <Class IRI="#Spada"/>
+        <Class IRI="#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Kappa"/>
+        <Class IRI="#Oni"/>
+        <Class IRI="#Yurei"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="Yebisu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Amaterasu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Epoca"/>
+        <NamedIndividual IRI="#Asuka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SacredPlace"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MythicalEvent"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oni"/>
+        <NamedIndividual IRI="#Emma_Daio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Epoca"/>
+        <NamedIndividual IRI="#Heian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Izanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Izanami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Specchio"/>
+        <NamedIndividual IRI="#Kagami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Kagutsuchi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SacredPlace"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SacredPlace"/>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Spada"/>
+        <NamedIndividual IRI="#Kusanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <NamedIndividual IRI="#Kyoto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gioiello"/>
+        <NamedIndividual IRI="#Magatama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LegendaryHuman"/>
+        <NamedIndividual IRI="#Masakado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LegendaryHuman"/>
+        <NamedIndividual IRI="#Musashi_Miyamoto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MythicalEvent"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MythicalEvent"/>
+        <NamedIndividual IRI="#Nascita_Delle_Divinità"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LegendaryHuman"/>
+        <NamedIndividual IRI="#Nobunaga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Yurei"/>
+        <NamedIndividual IRI="#Oiwa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Yurei"/>
+        <NamedIndividual IRI="#Okiku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Raijin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ritual"/>
+        <NamedIndividual IRI="#Rito_Di_Iniziazione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ritual"/>
+        <NamedIndividual IRI="#Rito_Di_Invocazione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ritual"/>
+        <NamedIndividual IRI="#Rito_Di_Purificazione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SacredPlace"/>
+        <NamedIndividual IRI="#Sensoji"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Susanoo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SacredPlace"/>
+        <NamedIndividual IRI="#Todaiji"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <NamedIndividual IRI="#Tokyo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Divinità"/>
+        <NamedIndividual IRI="#Tsukiyomi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oni"/>
+        <NamedIndividual IRI="#Umibozu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LegendaryHuman"/>
+        <NamedIndividual IRI="#Yoshitsune"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="Yebisu"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Ebisu_(mythology)"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Amaterasu"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Amaterasu"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Izanagi"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanagi"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Izanami"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanami"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Kagutsuchi"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Kagu-tsuchi"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Masakado"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Taira_no_Masakado"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Musashi_Miyamoto"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Miyamoto_Musashi"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Nobunaga"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Oda_Nobunaga"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Raijin"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Raijin"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Susanoo"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Susanoo-no-Mikoto"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Tsukiyomi"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Tsukuyomi-no-Mikoto"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Yoshitsune"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Minamoto_no_Yoshitsune"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="Yebisu"/>
+        <NamedIndividual IRI="#Amaterasu"/>
+        <NamedIndividual IRI="#Izanagi"/>
+        <NamedIndividual IRI="#Izanami"/>
+        <NamedIndividual IRI="#Kagutsuchi"/>
+        <NamedIndividual IRI="#Raijin"/>
+        <NamedIndividual IRI="#Susanoo"/>
+        <NamedIndividual IRI="#Tsukiyomi"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Byodoin"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+        <NamedIndividual IRI="#Sensoji"/>
+        <NamedIndividual IRI="#Todaiji"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="#Nascita_Delle_Divinità"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Emma_Daio"/>
+        <NamedIndividual IRI="#Umibozu"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Masakado"/>
+        <NamedIndividual IRI="#Musashi_Miyamoto"/>
+        <NamedIndividual IRI="#Nobunaga"/>
+        <NamedIndividual IRI="#Yoshitsune"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Oiwa"/>
+        <NamedIndividual IRI="#Okiku"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Rito_Di_Iniziazione"/>
+        <NamedIndividual IRI="#Rito_Di_Invocazione"/>
+        <NamedIndividual IRI="#Rito_Di_Purificazione"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="Yebisu"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Amaterasu"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Ha_Evento"/>
+        <NamedIndividual IRI="#Asuka"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Byodoin"/>
+        <NamedIndividual IRI="#Amaterasu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Byodoin"/>
+        <NamedIndividual IRI="Yebisu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_inserito_in"/>
+        <NamedIndividual IRI="#Byodoin"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <NamedIndividual IRI="#Byodoin"/>
+        <NamedIndividual IRI="#Tokyo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Ha_Creatura"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="#Oiwa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="#Musashi_Miyamoto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="#Asuka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Ha_Evento"/>
+        <NamedIndividual IRI="#Heian"/>
+        <NamedIndividual IRI="#Nascita_Delle_Divinità"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Ha_Evento"/>
+        <NamedIndividual IRI="#Heian"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Izanagi"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Izanami"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Kagutsuchi"/>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+        <NamedIndividual IRI="#Izanagi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+        <NamedIndividual IRI="#Izanami"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_inserito_in"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+        <NamedIndividual IRI="#Kyoto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+        <NamedIndividual IRI="#Kagutsuchi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+        <NamedIndividual IRI="#Kyoto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#NarrataInEvento"/>
+        <NamedIndividual IRI="#Kusanagi"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Oggetto_In_Luogo_Sacro"/>
+        <NamedIndividual IRI="#Kusanagi"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Contiene"/>
+        <NamedIndividual IRI="#Kyoto"/>
+        <NamedIndividual IRI="#Kiyomizudera"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Contiene"/>
+        <NamedIndividual IRI="#Kyoto"/>
+        <NamedIndividual IRI="#Kinkakuji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="#Nobunaga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="#Heian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <NamedIndividual IRI="#Nascita_Delle_Divinità"/>
+        <NamedIndividual IRI="#Heian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Raijin"/>
+        <NamedIndividual IRI="#Sensoji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Avviene_In"/>
+        <NamedIndividual IRI="#Rito_Di_Iniziazione"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Avviene_In"/>
+        <NamedIndividual IRI="#Rito_Di_Invocazione"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Avviene_In"/>
+        <NamedIndividual IRI="#Rito_Di_Purificazione"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <NamedIndividual IRI="#Sensoji"/>
+        <NamedIndividual IRI="#Tokyo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Susanoo"/>
+        <NamedIndividual IRI="#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Todaiji"/>
+        <NamedIndividual IRI="#Susanoo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#comprende"/>
+        <NamedIndividual IRI="#Todaiji"/>
+        <NamedIndividual IRI="#Tsukiyomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <NamedIndividual IRI="#Todaiji"/>
+        <NamedIndividual IRI="#Tokyo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Contiene"/>
+        <NamedIndividual IRI="#Tokyo"/>
+        <NamedIndividual IRI="#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Contiene"/>
+        <NamedIndividual IRI="#Tokyo"/>
+        <NamedIndividual IRI="#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Contiene"/>
+        <NamedIndividual IRI="#Tokyo"/>
+        <NamedIndividual IRI="#Sensoji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <NamedIndividual IRI="#Tsukiyomi"/>
+        <NamedIndividual IRI="#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnoEvento"/>
+        <NamedIndividual IRI="#Discesa_Negli_Inferi"/>
+        <Literal datatypeIRI="&xsd;int">538</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+        <NamedIndividual IRI="#Kagami"/>
+        <Literal datatypeIRI="&xsd;int">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+        <NamedIndividual IRI="#Kusanagi"/>
+        <Literal datatypeIRI="&xsd;int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+        <NamedIndividual IRI="#Magatama"/>
+        <Literal datatypeIRI="&xsd;int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#PotenzaMagica"/>
+        <NamedIndividual IRI="#Magatama"/>
+        <Literal datatypeIRI="&xsd;int">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnoEvento"/>
+        <NamedIndividual IRI="#Nascita_Del_Giappone"/>
+        <Literal datatypeIRI="&xsd;int">794</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#AnnoEvento"/>
+        <NamedIndividual IRI="#Nascita_Delle_Divinità"/>
+        <Literal datatypeIRI="&xsd;int">794</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Ha_Creatura"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Ha_Evento"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <ObjectProperty IRI="#Contiene"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <ObjectProperty IRI="#Ha_Evento"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <ObjectProperty IRI="#comprende"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#NarrataInEvento"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#è_situato_In"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#è_inserito_in"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Avviene_In"/>
+        <Class IRI="#Ritual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Contiene"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Ha_Creatura"/>
+        <Class IRI="#MythicalEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Ha_Evento"/>
+        <Class IRI="#Epoca"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+        <Class IRI="#MythicalEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NarrataInEvento"/>
+        <Class IRI="#Spada"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Oggetto_In_Luogo_Sacro"/>
+        <Class IRI="#SacredObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <Class IRI="#MythicalEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#UsatoInRito"/>
+        <Class IRI="#SacredObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#comprende"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <Class IRI="#Divinità"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#è_inserito_in"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Avviene_In"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Contiene"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Ha_Creatura"/>
+        <Class IRI="#Creatura_Mitologica"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Ha_Evento"/>
+        <Class IRI="#MythicalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+        <Class IRI="#LegendaryHuman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NarrataInEvento"/>
+        <Class IRI="#MythicalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Oggetto_In_Luogo_Sacro"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Parte_Di_Epoca"/>
+        <Class IRI="#Epoca"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#UsatoInRito"/>
+        <Class IRI="#Ritual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#comprende"/>
+        <Class IRI="#Divinità"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#èAssociataA"/>
+        <Class IRI="#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#è_inserito_in"/>
+        <Class IRI="#MythicalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#è_situato_In"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#UsatoInRito"/>
+            <ObjectProperty IRI="#Avviene_In"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#Oggetto_In_Luogo_Sacro"/>
+    </SubObjectPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#AnnoEvento"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#PotenzaMagica"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+        <Class IRI="#SacredObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#AnnoEvento"/>
+        <Class IRI="#MythicalEvent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#PotenzaMagica"/>
+        <Class IRI="#SacredObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#AnnoDiCreazione"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#AnnoEvento"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#PotenzaMagica"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#MythicalEvent"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#Ha_Creatura"/>
+                <Variable IRI="urn:swrl#e"/>
+                <NamedIndividual IRI="#Oiwa"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#EventoVendicativo"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#MythicalEvent"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#Ha_Umano_Leggendario"/>
+                <Variable IRI="urn:swrl#e"/>
+                <NamedIndividual IRI="#Nobunaga"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#EventoDiUnificazione"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#MythicalEvent"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#AnnoEvento"/>
+                <Variable IRI="urn:swrl#e"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">700</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#EventoAntico"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SacredObject"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#AnnoDiCreazione"/>
+                <Variable IRI="urn:swrl#o"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">100</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#TesoroNazionale"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SacredObject"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#PotenzaMagica"/>
+                <Variable IRI="urn:swrl#o"/>
+                <Variable IRI="urn:swrl#m"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="urn:swrl#m"/>
+                <Literal datatypeIRI="&xsd;integer">1000</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#InsegnaImperiale"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Yebisu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio della fortuna e dei pescatori</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Yebisu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yebisu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Amaterasu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dea giapponese del sol levante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Amaterasu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Amaterasu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AnnoDiCreazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno in cui è stato creato l&apos;oggetto sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AnnoDiCreazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno_di_creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AnnoEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno in cui è accaduto l&apos;evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AnnoEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno_Evento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Asuka</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Epoca che va dal 538 al 710</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Asuka</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Asuka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Avviene_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Collega il rito al luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Avviene_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Avviene_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Byodoin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tempio dell&apos;epoca Heian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Byodoin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Byodoin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contiene</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Quali luoghi sacri contiene il luogo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Contiene</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Contiene</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Creatura_Mitologica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral"> creatura leggendaria o &apos;altra entità mitologica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Creatura_Mitologica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">CreaturaMitologica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Discesa_Negli_Inferi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">evento mitologico riguardante Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Discesa_Negli_Inferi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Discesa Negli Inferi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rappresenta l&apos;entità divina nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Divinità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Emma_Daio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oni del sottosuolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Emma_Daio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Emma Daio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Comprende cicli mitologici o epoche specifiche nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Epoca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EventoAntico</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento accaduto prima dell&apos;anno 700</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EventoAntico</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoAntico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EventoDiUnificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento legato all&apos;unificazione del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EventoDiUnificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoDiUnificazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EventoVendicativo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento dove è presente uno Yurei come creatura mitologica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EventoVendicativo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoVendicativo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gioiello</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Gioiello sacro usato in cerimonie e riti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Gioiello</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Gioiello</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ha_Creatura</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;evento contiene creature mitologiche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ha_Creatura</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ha_Creatura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ha_Evento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;epoca ha all&apos;interno l&apos;evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ha_Evento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ha_Evento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ha_Umano_Leggendario</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;evento contiene umani leggendari</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ha_Umano_Leggendario</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ha_Umano_Leggendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Heian</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Periodo che va dal 794 al 1192</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Heian</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Heian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InsegnaImperiale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oggetto sacro diventato simbolo dell&apos;impero per via dell&apos;elevata potenza magica narrata nelle leggende</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InsegnaImperiale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">InsegnaImperiale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Izanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio della creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Izanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Izanagi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Izanami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dea della creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Izanami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kagami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Specchio sacro giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kagami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kagami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kagutsuchi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio del fuoco distruttivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kagutsuchi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kagutsuchi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kappa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Creatura acquatica simile ad una tartaruga antropomorfa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kappa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kappa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kinkakuji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il padiglione d&apos;oro di Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kinkakuji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kinkakuji</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kiyomizudera</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tempio più famoso di Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kiyomizudera</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kiyomizudera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kusanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spada sacra giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kusanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kusanagi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Kyoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ex capitale del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Kyoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LegendaryHuman</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Include una figura umana leggendaria, come un eroe mitologico, un imperatore divinizzato o un&apos;altra figura importante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LegendaryHuman</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">UmanoLeggendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Magatama</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Gioiello sacro giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Magatama</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Magatama</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Masakado</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Primo samurai giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Masakado</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Masakado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Musashi_Miyamoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il più grande maestro di spada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Musashi_Miyamoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Musashi Miyamoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MythicalEvent</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Comprende un evento chiave o una storia mitologica fondamentale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MythicalEvent</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoMitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NarrataInEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Quale spada viene narrata in un evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NarrataInEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Narrata_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nascita_Del_Giappone</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento mitologico riguardante la nascita del giappone tramite Izanagi e Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nascita_Del_Giappone</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nascita Del Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nascita_Delle_Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento mitologico che narra la nascita di Amaterasu e Susanoo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nascita_Delle_Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nascita Delle Divinità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nobunaga</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Samurai unificatore del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nobunaga</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nobunaga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Oggetto_In_Luogo_Sacro</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Collega l&apos;oggetto sacro al luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oggetto_In_Luogo_Sacro</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oggetto_In_Luogo_Sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Oiwa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Yurei noto per la sua vendetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oiwa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oiwa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Okiku</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yurei vendicativo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Okiku</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Okiku</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Oni</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Creatura malvagia demoniaca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oni</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Parte_Di_Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;evento mitologico è parte dell&apos;epoca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Parte_Di_Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Parte_Di_Epoca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PotenzaMagica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Potenza Magica dell&apos;oggetto sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PotenzaMagica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Potenza_Magica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Raijin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio del tempo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Raijin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Raijin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Rito_Di_Iniziazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito per introdurre nuovi iniziati</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rito_Di_Iniziazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito_Di_Iniziazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Rito_Di_Invocazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito per invocare spiriti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rito_Di_Invocazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito_Di_Invocazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Rito_Di_Purificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Purifica corpo e spirito tramite acqua termale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Rito_Di_Purificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito_Di_Purificazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ritual</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Include concetti legati alla spiritualità, rituali religiosi, pratiche sacre e credenze nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ritual</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SacredObject</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Include un oggetto o strumento importante nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SacredObject</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">OggettoSacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SacredPlace</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rappresenta un luogo considerato sacro o importante nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SacredPlace</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">LuogoSacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sensoji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tempio più antico di Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sensoji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sensoji</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Spada</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spada leggendaria associata ad eventi mitologici</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Spada</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Specchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Specchio sacro usato in riti sacri e cerimonie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Specchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Specchio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Susanoo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio dei mari e delle tempeste</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Susanoo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Susanoo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TesoroNazionale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un oggetto sacro estremamente antico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TesoroNazionale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">TesoroNazionale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Todaiji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Santuario dell&apos;epoca Nara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Todaiji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Todaiji</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tokyo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Capitale del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tokyo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tokyo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tsukiyomi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio della luna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tsukiyomi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tsukiyomi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Umibozu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oni marino leggendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Umibozu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Umibozu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UsatoInRito</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Quale oggetto è usato in un rito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UsatoInRito</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Usato_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yokai</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rappresenta una classe specifica per uno yokai, una creatura sovrannaturale nel folclore giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yokai</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yokai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yoshitsune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Eroe molto raccontato nel teatro kabuki giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yoshitsune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yoshitsune</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Yurei</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spirito o fantasma associato a persone decedute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Yurei</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yurei</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#comprende</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il luogo sacro comprende delle divinità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#comprende</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Comprende</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#èAssociataA</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Associa la divinità al rispettivo luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#èAssociataA</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è_Associata_A</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#è_inserito_in</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il luogo sacro si trova nel contesto di un evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#è_inserito_in</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è_Inserito_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#è_situato_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">In quale luogo è situato il luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#è_situato_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è_Situato_In</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
