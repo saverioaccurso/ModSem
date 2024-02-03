@@ -1,0 +1,2901 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.modsem.org/ontologies/japanesemythologyontology_mat"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.modsem.org/ontologies/japanesemythologyontology_mat">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">part-whole</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">We can represent, transitively, where something is located. It remains unspecified what kind of location relation we are trying to represent: reference location, partial location, physical location, social or metaphoric location, etc.
+Moreover, temporal location is not caught with this pattern (you need a placement situation for that).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Japanese Mythology Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">jmo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal datatypeIRI="&xsd;string">2024-01-25</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="&xsd;string">Saverio Accurso</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios"/>
+        <Literal datatypeIRI="&xsd;string">Brain and heart are parts of the human body, substantia nigra is part of brain.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Colosseum is located in Rome.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">part of</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasAuthor"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Aldo Gangemi</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs"/>
+        <Literal datatypeIRI="&xsd;string">The time indexed part of is used as alternative when the temporal indexing has to be represented. Part of CP is specialized by componency. Sometimes this CP is wrongly used in order to model constituency and membership. These two modeling problems are addressed by constituency, and collection entity CPs, respectively.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.modsem.org/ontologies/japanesemythologyontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&xsd;string">JapaneseMythologyOntology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent"/>
+        <Literal datatypeIRI="&xsd;string">To represents entities and their parts.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Where is a certain thing located? What is located at this place?</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements"/>
+        <Literal datatypeIRI="&xsd;string">What is this entity part of? What are the parts of this entity?</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;string">1.1 added rdfs:isDefinedBy for all named entities</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Ontology to describe the main features of Japanese mythology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ontologia per descrivere le principali caratteristiche della mitologia giapponese</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&xsd;string">Created by Valentina Presutti</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">To talk about places of things.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ontologia della Mitologia Giapponese</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences"/>
+        <Literal datatypeIRI="&xsd;string">This CP allows designers to represent entities and their parts i.e., part-whole relations, with transitivity. The temporal aspect of this relation cannot be expressed; in order to solve this issue the time indexed part of CP can be used.</Literal>
+    </Annotation>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Inugami"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q1150212"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kappa"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q335140"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q692111"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oni"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione"/>
+            <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione"/>
+            <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+            <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q1573015"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Spada"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q1771860"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q1193330"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yurei"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+            <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoAntico"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoDiUnificazione"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoVendicativo"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Gioiello"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Hyosube"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kappa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Hyosube"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q335140"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Inugami"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Inugami"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q1573015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kappa"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oni"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Spada"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Specchio"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oni"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yurei"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yurei"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1150212"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1150212"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q1573015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1193330"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oni"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1193330"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1573015"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1771860"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q1771860"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q335140"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q692111"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q692111"/>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Gioiello"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Spada"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Specchio"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yurei"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontologyYebisu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Asuka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoAntico"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoVendicativo"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oni"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Heian"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Specchio"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Spada"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Gioiello"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Masakado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoDiUnificazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yurei"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yokai"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yurei"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.wikidata.org/wiki/Q11050647"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.wikidata.org/wiki/Q503186"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Raijin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oni"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://www.wikidata.org/wiki/Q730052"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Amaterasu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Ebisu_(mythology)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanagi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Kagu-tsuchi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Minamoto_no_Yoshitsune"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Miyamoto_Musashi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Oda_Nobunaga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Raijin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Susanoo-no-Mikoto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Taira_no_Masakado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Tsukuyomi-no-Mikoto"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontologyYebisu"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Ebisu_(mythology)"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Amaterasu"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanagi"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanami"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Izanami"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Kagu-tsuchi"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Masakado"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Taira_no_Masakado"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Miyamoto_Musashi"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Oda_Nobunaga"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Raijin"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Raijin"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Susanoo-no-Mikoto"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Tsukuyomi-no-Mikoto"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune"/>
+        <NamedIndividual IRI="https://dbpedia.org/page/Minamoto_no_Yoshitsune"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontologyYebisu"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanami"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Raijin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Asuka"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Heian"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Masakado"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontologyYebisu"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Asuka"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontologyYebisu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Asuka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Heian"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Heian"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanami"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagami"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Izanami"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Masakado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Heian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Okiku"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Heian"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Raijin"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Raijin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi"/>
+        <Literal datatypeIRI="&xsd;int">538</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagami"/>
+        <Literal datatypeIRI="&xsd;int">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kagami"/>
+        <Literal datatypeIRI="&xsd;int">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+        <Literal datatypeIRI="&xsd;int">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi"/>
+        <Literal datatypeIRI="&xsd;int">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+        <Literal datatypeIRI="&xsd;int">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Magatama"/>
+        <Literal datatypeIRI="&xsd;int">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone"/>
+        <Literal datatypeIRI="&xsd;int">794</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+        <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità"/>
+        <Literal datatypeIRI="&xsd;int">794</Literal>
+    </DataPropertyAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+    </InverseFunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Spada"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Contiene"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Epoca"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ritual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#comprende"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Divinità"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In"/>
+        <Class IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito"/>
+            <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro"/>
+    </SubObjectPropertyOf>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+    </EquivalentDataProperties>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+        <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura"/>
+                <Variable IRI="urn:swrl#e"/>
+                <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoVendicativo"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario"/>
+                <Variable IRI="urn:swrl#e"/>
+                <NamedIndividual IRI="http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoDiUnificazione"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento"/>
+                <Variable IRI="urn:swrl#e"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">700</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#EventoAntico"/>
+                <Variable IRI="urn:swrl#e"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione"/>
+                <Variable IRI="urn:swrl#o"/>
+                <Variable IRI="urn:swrl#a"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable IRI="urn:swrl#a"/>
+                <Literal datatypeIRI="&xsd;integer">100</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica"/>
+                <Variable IRI="urn:swrl#o"/>
+                <Variable IRI="urn:swrl#m"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="urn:swrl#m"/>
+                <Literal datatypeIRI="&xsd;integer">1000</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale"/>
+                <Variable IRI="urn:swrl#o"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontologyYebisu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio della fortuna e dei pescatori</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontologyYebisu</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">God of luck and fishermen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontologyYebisu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yebisu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dea giapponese del sol levante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Japanese goddess of the rising sun</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Amaterasu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Amaterasu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno in cui è stato creato l&apos;oggetto sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Year in which the sacred object was created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#AnnoDiCreazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno_di_creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno in cui è accaduto l&apos;evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Year in which the mythological event occurred</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#AnnoEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Anno_Evento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Asuka</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Epoca che va dal 538 al 710</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Asuka</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Period ranging from 538 to 710</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Asuka</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Asuka</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Collega il rito al luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Connect the ritual to the sacred place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Avviene_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Avviene_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Heian era temple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tempio dell&apos;epoca Heian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Byodoin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Byodoin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Contiene</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Quali luoghi sacri contiene il luogo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Contiene</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">What sacred places does the place contain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Contiene</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Contiene</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral"> creatura leggendaria o un&apos;altra entità mitologica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">legendary creature or other mythological entity
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Creatura_Mitologica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">CreaturaMitologica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">evento mitologico riguardante Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">mythological event concerning Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Discesa_Negli_Inferi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Discesa Negli Inferi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rappresenta l&apos;entità divina nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Divinità</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Represents the divine entity in Japanese mythology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Divinità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oni del sottosuolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Oni of the underground</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Emma_Daio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Emma Daio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Comprende cicli mitologici o epoche specifiche nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Epoca</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It includes mythological cycles or specific eras in Japanese mythology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Epoca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoAntico</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Event that occurred before the year 700</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoAntico</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento accaduto prima dell&apos;anno 700</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoAntico</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoAntico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoDiUnificazione</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Event related to the unification of Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoDiUnificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento legato all&apos;unificazione del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoDiUnificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoDiUnificazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoVendicativo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Event where a Yurei is present as a mythological creature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoVendicativo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento dove è presente uno Yurei come creatura mitologica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#EventoVendicativo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoVendicativo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Gioiello</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Gioiello sacro usato in cerimonie e riti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Gioiello</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sacred jewel used in ceremonies and rites</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Gioiello</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Gioiello</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;evento contiene creature mitologiche</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The event contains mythological creatures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Creatura</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ha_Creatura</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;epoca ha all&apos;interno l&apos;evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The era has the mythological event within it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Evento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ha_Evento</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;evento contiene umani leggendari</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The event contains legendary humans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ha_Umano_Leggendario</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ha_Umano_Leggendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Heian</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Period from 794 to 1192</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Heian</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Periodo che va dal 794 al 1192</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Heian</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Heian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Hyosube</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fur-covered Kappa variant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Hyosube</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Variante di Kappa ricoperto di pelo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Hyosube</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Hyosube</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oggetto sacro diventato simbolo dell&apos;impero per via dell&apos;elevata potenza magica narrata nelle leggende</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sacred object that became a symbol of the empire due to the high magical power narrated in the legends</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#InsegnaImperiale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">InsegnaImperiale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Inugami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Degli Shikigami con aspetto canino</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Inugami</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Shikigami with canine appearance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Inugami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Inugami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio della creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">God of creation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Izanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Izanagi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Izanami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dea della creazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Izanami</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Goddess of creation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Izanami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kagami</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Japanese sacred mirror</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kagami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Specchio sacro giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kagami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kagami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio del fuoco distruttivo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">God of destructive fire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kagutsuchi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kagutsuchi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kappa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Anthropomorphic turtle-like aquatic creature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kappa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Creatura acquatica simile ad una tartaruga antropomorfa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kappa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kappa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il padiglione d&apos;oro di Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The Golden Pavilion in Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kinkakuji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kinkakuji</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fox-looking yokai
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yokai dall&apos;aspetto di volpe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kitsune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kitsune</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Most famous temple in Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tempio più famoso di Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kiyomizudera</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kiyomizudera</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Japanese sacred sword</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spada sacra giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kusanagi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kusanagi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Ex capitale del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Former capital of Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Kyoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Include una figura umana leggendaria, come un eroe mitologico, un imperatore divinizzato o un&apos;altra figura importante</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Includes a legendary human figure, such as a mythological hero, deified emperor, or other important figure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#LegendaryHuman</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">UmanoLeggendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Magatama</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Gioiello sacro giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Magatama</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Japanese sacred jewel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Magatama</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Magatama</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Masakado</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">First Japanese samurai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Masakado</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Primo samurai giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Masakado</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Masakado</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il più grande maestro di spada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The greatest sword master</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Musashi_Miyamoto</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Musashi Miyamoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Comprende un evento chiave o una storia mitologica fondamentale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It includes a key event or key mythological story</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#MythicalEvent</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">EventoMitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Quale spada viene narrata in un evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Which sword is narrated in a mythological event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#NarrataInEvento</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Narrata_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento mitologico riguardante la nascita del giappone tramite Izanagi e Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mythological event concerning the birth of Japan through Izanagi and Izanami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Del_Giappone</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nascita Del Giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Evento mitologico che narra la nascita di Amaterasu e Susanoo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mythological event that narrates the birth of Amaterasu and Susanoo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nascita_Delle_Divinità</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nascita Delle Divinità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Samurai unificatore del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Samurai unifier of Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Nobunaga</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Nobunaga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Collega l&apos;oggetto sacro al luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Connect the sacred object to the sacred place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oggetto_In_Luogo_Sacro</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oggetto_In_Luogo_Sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Yurei known for his revenge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Yurei noto per la sua vendetta</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oiwa</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oiwa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Okiku</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Vengeful Yurei</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Okiku</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yurei vendicativo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Okiku</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Okiku</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oni</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Creatura malvagia demoniaca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oni</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Demonic evil creature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Oni</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">L&apos;evento mitologico è parte dell&apos;epoca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The mythological event is part of the era</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Parte_Di_Epoca</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Parte_Di_Epoca</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Magical power of the sacred object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Potenza Magica dell&apos;oggetto sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#PotenzaMagica</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Potenza_Magica</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Raijin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio del tempo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Raijin</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">God of time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Raijin</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Raijin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rite to introduce new initiates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito per introdurre nuovi iniziati</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Iniziazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito_Di_Iniziazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rite to invoke spirits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito per invocare spiriti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Invocazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito_Di_Invocazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Purifica corpo e spirito tramite acqua termale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Purifies body and spirit using thermal water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Rito_Di_Purificazione</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito_Di_Purificazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ritual</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Include concetti legati alla spiritualità, rituali religiosi, pratiche sacre e credenze nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ritual</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Includes concepts related to spirituality, religious rituals, sacred practices, and beliefs in Japanese mythology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Ritual</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Include un oggetto o strumento importante nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Includes an object or tool important in Japanese mythology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#SacredObject</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">OggettoSacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It represents a place considered sacred or important in Japanese mythology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rappresenta un luogo considerato sacro o importante nella mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#SacredPlace</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">LuogoSacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Oldest temple in Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tempio più antico di Kyoto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Sensoji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Sensoji</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Servant spirits of Japanese mythology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spiriti servitori dellla mitologia giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Shikigami</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Shikigami</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Spada</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Legendary sword associated with mythological events</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Spada</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spada leggendaria associata ad eventi mitologici</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Spada</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spada</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Specchio</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sacred mirror used in sacred rites and ceremonies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Specchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Specchio sacro usato in riti sacri e cerimonie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Specchio</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Specchio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio dei mari e delle tempeste</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">God of seas and storms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Susanoo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Susanoo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yokai dall&apos;aspetto di un cane-procione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Yokai with the appearance of a raccoon-dog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tanuki</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tanuki</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An extremely ancient sacred object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un oggetto sacro estremamente antico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#TesoroNazionale</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">TesoroNazionale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Nara era shrine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Santuario dell&apos;epoca Nara</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Todaiji</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Todaiji</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Capital of Japan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Capitale del giappone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tokyo</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tokyo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Dio della luna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">God of the moon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Tsukiyomi</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Tsukiyomi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Legendary marine oni</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Oni marino leggendario</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Umibozu</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Umibozu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Quale oggetto è usato in un rito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Which object is used in a ritual</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#UsatoInRito</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Usato_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yokai</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It represents a specific class for a yokai, a supernatural creature in Japanese folklore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yokai</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Rappresenta una classe specifica per uno yokai, una creatura sovrannaturale nel folclore giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yokai</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yokai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Eroe molto raccontato nel teatro kabuki giapponese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Much told hero in Japanese kabuki theatre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yoshitsune</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yoshitsune</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yurei</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Spirit or ghost associated with deceased persons</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yurei</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Spirito o fantasma associato a persone decedute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#Yurei</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Yurei</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#comprende</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il luogo sacro comprende delle divinità</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#comprende</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The sacred place includes deities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#comprende</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Comprende</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Associa la divinità al rispettivo luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Associate the deity with the respective sacred place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#èAssociataA</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è_Associata_A</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Il luogo sacro si trova nel contesto di un evento mitologico</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The sacred place is located in the context of a mythological event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#è_inserito_in</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è_Inserito_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">In quale luogo è situato il luogo sacro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Where the sacred place is located</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.modsem.org/ontologies/japanesemythologyontology#è_situato_In</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è_Situato_In</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A transitive relation expressing parthood between any entities, e.g. &apos;the human body has a brain as part&apos;. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see &apos;componency&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una relazione transitiva che esprime la partenità tra qualsiasi entità, ad es. &quot;il corpo umano ha come parte un cervello&quot;. Quando si specializza questo modello, fare attenzione a limitare il dominio e l&apos;intervallo in modo appropriato, poiché potrebbe essere controintuitivo utilizzare questa relazione arbitrariamente, ad es. tra animali e pianeti. Per una parte intransitiva del modello, vedere &apos;componente&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A transitive relation expressing parthood between any entities, e.g. &apos;brain is a part of the human body&apos;. When specializing this pattern, take care of restricting the domain and range appropriately, since it could be counterintuitive to use this relation arbitrarily, e.g. between animals and planets. For an intransitive partof pattern, see &apos;componency&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una relazione transitiva che esprime la partenità tra qualsiasi entità, ad es. &quot;il cervello è una parte del corpo umano&quot;. Quando si specializza questo modello, fare attenzione a limitare il dominio e l&apos;intervallo in modo appropriato, poiché potrebbe essere controintuitivo utilizzare questa relazione arbitrariamente, ad es. tra animali e pianeti. Per una parte intransitiva del modello, vedere &apos;componente&apos;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is part of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A location, in a very generic sense: a political geographic entity (Roma, Lesotho), a location determined by the presence of other entities (&apos;the area close to Roma&apos;), pivot events or signs (&quot;the area where the helicopter fell&quot;), complements of other entities (&apos;the area under the table&apos;), as well as physical objects conceptualized as locations as their main identity criterion (&apos;the territory of Italy&apos;).
+In this generic sense, a Place is an &apos;approximate&apos;, relative location. For an &apos;absolute&apos;, abstract location, cf. the pattern spaceregion.owl.
+Formally, a Place is defined by the fact of having something located in it; a Place is located in itself.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Un luogo, in senso molto generico: un&apos;entità geografica politica (Roma, Lesotho), un luogo determinato dalla presenza di altre entità (&quot;l&apos;area vicina a Roma&quot;), eventi o segnali cardine (&quot;l&apos;area dove è caduto l&apos;elicottero&quot; &quot;), complementi di altre entità (&quot;l&apos;area sotto il tavolo&quot;), nonché oggetti fisici concettualizzati come luoghi come loro principale criterio di identità (&quot;il territorio d&apos;Italia&quot;).
+In questo senso generico, un Luogo è una posizione relativa, “approssimativa”. Per una collocazione &apos;assoluta&apos;, astratta, cfr. il modello spaceregion.owl.
+Formalmente un Luogo è definito dal fatto di avere in esso collocato qualcosa; un Luogo si trova in sé stesso.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Luogo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#Place</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A generic, relative localization, holding between any entities. E.g. &apos;the cat is on the mat&apos;, &apos;Omar is in Samarcanda&apos;, &apos;the wound is close to the femural artery&apos;.
+For &apos;absolute&apos; locations, see SpaceRegion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una localizzazione generica e relativa, che intercorre tra qualsiasi entità. Per esempio. &apos;il gatto è sul tappeto&apos;, &apos;Omar è a Samarcanda&apos;, &apos;la ferita è vicino all&apos;arteria femorale&apos;.
+Per le posizioni &quot;assolute&quot;, vedere SpaceRegion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">ha localizzazione</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#hasLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A generic, relative localization, holding between any entities. E.g. &apos;Rome is the seat of the Pope&apos;, &apos;the liver is the location of the tumor&apos;.
+As a very general notion of localization, it is assumed as transitive.
+For &apos;absolute&apos; locations, see SpaceRegion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">Una localizzazione generica e relativa, che intercorre tra qualsiasi entità. Per esempio. &quot;Roma è la sede del Papa&quot;, &quot;il fegato è la sede del tumore&quot;.
+Essendo una nozione molto generale di localizzazione, viene assunta come transitiva.
+Per le posizioni &quot;assolute&quot;, vedere SpaceRegion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf</IRI>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is location of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.ontologydesignpatterns.org/cp/owl/place.owl#isLocationOf</IRI>
+        <Literal xml:lang="it" datatypeIRI="&rdf;PlainLiteral">è una localizzazione di</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#coversRequirements</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is used for exemplifying possible requirements the content pattern provides a solution for. Requirements are expressed as natural language competency questions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#extractedFrom</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property should be assigned with a URI, which points to the possible reference ontology which the annotated pattern was extracted from (i.e. the reference ontology that the ontology elements have been deeply or partially cloned by). The range is not explicit in the definition of the annotation property because it would turn the ontology to OWL Full. E.g. The participation pattern is extracted from the Dolce Ultra Lite ontology, hence the value for this annotation property is http://www.ontologydesignpatterns.org/ont/dul/DUL.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasComponent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is useful for content ontology design patterns. Its value is a URI, which refers to another content ontology design pattern which is a component of the annotated one.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasConsequences</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is used for briefly describing the benefits and/or possible trade-offs when using the CP.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasIntent</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is used in order to describe the intent of the content pattern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#hasUnitTest</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This property can be used to annotate a unit test (e.g. in the form of a SPARQL query) to be launched to evaluate an ontology against a requirement-based task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isCloneOf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is used for referring a cloned ontology entity to its cloning source.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#isSpecializationOf</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is useful for content ontology design patterns and its elements. Its value is a URI, which refers either to a content ontology design pattern that is specialized by the annotated one, or to an ontology element that is specialized by the annotated one.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#reengineeredFrom</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property should be assigned with a URI, which points to the concept schema, page, or anything else from which the annotated pattern was reengineered.  If the source does not have any URI e.g., a printed book, this property value should provide information as precise as possible in order to identify the source. This property is alternative to the extractedFrom property because it is used when the pattern come from a concept schema which is not an owl ontology. For example content ontology design patterns, which are reengineered from data model patterns, rdf schemas, etc. should be annotatd with this property. E.g. The basicpersonalfoaf pattern is extracted from the rdf FOAF specification, hence the value for this annotation property is http://xmlns.com/foaf/spec/20071002.rdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#relatedCPs</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property can be used to indicate other CPs (if any) that specialize, generalize, inlcude, or are components of the CP. Furthermore, this field may indicate other CPs that are typically used in conjunction with the described one. Important similarities and differences with other patterns can be also described here.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#scenarios</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This annotation property is used for describing examples of instantiation of the Content OP. For example, for the part-of Content OP (which represents part-whole relations) a possible scenario is the sentence: &quot;the brain is part of the human body&quot;. Scenarios are expressed as natural language sentences.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
